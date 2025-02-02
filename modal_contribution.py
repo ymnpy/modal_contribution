@@ -4,12 +4,12 @@ import pandas as pd
 import os
 sns.set_theme(style="ticks",font_scale=1.5)
 
+
 def get_stuff(path):
     """
     MEFFMASS(ALL)=YES must be defined
     path -> .f06 file
     """
-    
     cont={"Mod":[],"freq":[],"T1":[],"T2":[],"T3":[],"R1":[],"R2":[],"R3":[]}
     with open(path,"r") as fin:
         lines=fin.readlines()
@@ -36,7 +36,6 @@ def get_stuff(path):
     return cont
 
 
-
 def plot_stuff(cont,no_modes=10):
     fig, axes = plt.subplots(1, 2, figsize=(18, 8))
     
@@ -58,10 +57,8 @@ def plot_stuff(cont,no_modes=10):
 
 if __name__=="__main__":
     path=r'/basic.f06'
-    
-    folder=os.path.dirname(path)
+    os.chdir(s.path.dirname(path))
     file_name=os.path.split(path)[-1].split(".")[0]
-    os.chdir(folder)
     
     ll=get_stuff(path)
     plot_stuff(ll)
