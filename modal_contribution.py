@@ -57,7 +57,7 @@ def plot_stuff(cont,no_modes=10):
 
 
 if __name__=="__main__":
-    path='C:/Users/User/Desktop/newwf/UAV_modal/basic.f06'
+    path=r'/basic.f06'
     
     folder=os.path.dirname(path)
     file_name=os.path.split(path)[-1].split(".")[0]
