@@ -7,6 +7,6 @@ This basic script reads .f06 file (assuming the user already requested modal mas
 plot of the same data:
 ![modes](https://github.com/user-attachments/assets/463bdf96-7fca-4a60-90ca-2e19c602ae0f)
 
-Reference paper for the modal contribution plot idea: 
+Reference paper for the modal contribution plot idea:<br>
 Ted Rose, <i>Using Optimization in MSC/NASTRAN to Minimize Response to a Rotating Imbalance</i>
 
