@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
 import pandas as pd
+import os
 sns.set_theme(style="ticks",font_scale=1.5)
 
 def get_stuff(path):
