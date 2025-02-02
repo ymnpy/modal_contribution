@@ -1,0 +1,1129 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2017 MSC Software Corporation and its licensors. All rights reserved.         
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           MSC Software          * *
+                                              * *               CORP              * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *     Version 2018.0.1-CL533596   * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          DEC  1, 2017           * *
+                                              * *                                 * *
+                                              * *               AMD               * *
+                                              * *MODEL AMD Ryzen 7 3700X 8-Core P * *
+                                              * *     Windows 10 Pro 6.2 9200     * *
+                                              * * Compiled for 8664 (SINGLE Mode) * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+1News file - (October 31, 2017)
+  
+               Welcome to MSC Nastran 2018.0
+  
+  
+   Details of the new capabilities can be found in the MSC Nastran 2018
+     Release Guide available online in the installation documentation
+     sub-directory.
+   Additional information can be found at the MSC Nastran Product Support page:
+  
+      http://simcompanion.mscsoftware.com
+  
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+        MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      http://www.mscsoftware.com/Contents/Services/Training/
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions.
+  
+     Dynamics
+     -  Structural and Fluid Material property specification can now be
+        frequency dependent.
+     -  Anisotropic structural damping can be defined for composite
+        materials. Restriction removed that damping is proportional to
+        stiffness.
+     -  Spatial definition of property and material available now.
+  
+     Linear Buckling
+     -  Linear Buckling with local exclusion of differential stiffness in SOL
+        105.
+  
+     Rotordynamics
+     -  Enhanced Mode-Tracking for Campbell Diagrams. Two new methods
+        introduced: Numerical Slope-Continuity and Eigenvector-Based.
+     -  Rotors can now be included in upstream Part Superelements for
+        both single and multi-level assemblies.
+1    -  Support for definition of CBUSH element cross-coupling terms.
+  
+     Multiple-Mass Configuration
+     -  Easy definition and analysis of multiple mass cases in a single run.
+        Supported in SOL 101, 103, 107/110, 108/111, 109/112, 144, 145, 146,
+        200 and 400 solution sequences.
+  
+     Optimization
+     -  Shell stress constraints can now be defined for Topology Optimization.
+  
+     Assembly
+     -  New modules that can assemble multiple Bulk Data sections to form a
+        single MSC Nastran input file. Modules are analogous to part
+        superelements without reduction and are supported in SOL 101 - 112.
+  
+     Implicit Nonlinear Analysis - SOL 400
+     -  GPFORCE Output with Contact
+     -  Automatic Contact Generation
+     -  External Superelements Creation, Assembly and Data Recovery
+     -  CFAST Fastener element enabled to FUSE based on load criteria.
+  
+     Explicit Nonlinear Analysis - SOL 700
+     -  Automated Coupling Surfaces
+     -  New SOL 700 Dytran, Dytran under Nastran
+  
+     HPC
+     -  Improved performance and scalability for the New ACMS method
+     -  New MPYAD with better parallel performance and better method
+        selection.
+     -  New command line option, solve=auto and cpumax=N, to automatically
+        choose optimal solver and parallel options based on hardware and
+        the model.
+  
+     Results HDF5 Database
+     -  Additional data blocks have been added to the HDF5 file: OEFTGV,
+        OMONPNT, TOMVAR, TOPVAR, R1TABRD, HISADD, RESP12, WETFACES, META,
+        OFCRFM, EPTFSP, MPTFSP, TRNUORD, and UHT, as well as modal and
+        Rotordynamic matrices.
+  
+     Documentation
+  
+     The complete documentation set is provided in a separate installer and
+     when installed is available at:
+     MSC_DOC_DIR/doc/pdf_nastran directory.
+     Where MSC_DOC_DIR is the directory where documentation was installed
+     This help set has cross references between documents, links to how-to
+     videos, and example files.
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+1      http://simcompanion.mscsoftware.com/
+  
+     These documents were updated for the MSC Nastran 2018.0 Release
+  
+         1.  MSC Nastran 2018.0 Installation and Operations Guide
+         2.  MSC Nastran 2018.0 Quick Reference Guide
+         3.  MSC Nastran 2018.0 Release Guide
+         4.  MSC Nastran 2018.0 Linear Statics Analysis User's Guide
+         5.  MSC Nastran 2018.0 Dynamic Analysis User's Guide
+         6.  MSC Nastran 2018.0 Superelements User's Guide
+         7.  MSC Nastran 2018.0 Rotordynamics User's Guide
+         8.  MSC Nastran 2018.0 Demonstration Problems Manual
+         9.  MSC Nastran 2018.0 Nastran Embedded Fatigue User's Guide
+        10.  MSC Nastran 2018.0 Design Sensitivity and Optimization
+        11.  MSC Nastran 2018.0 Nonlinear User's Guide SOL 400
+        12.  MSC Nastran 2018.0 DMAP Programmer's Guide
+        13.  MSC Nastran 2018.0 High Performance Computing User's Guide
+  
+  
+  
+    Please refer to:
+  
+    MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+  
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     $ SYSFIELD=SCR*(RAW=YES,BUFFIO=YES,WNUM=16,WSIZE=16MB) $(C:/MSC.SOFTWARE/MSC_NAS
+     $ SYSFIELD=DBALL(RAW=YES,BUFFIO=YES,WNUM=16,WSIZE=16MB) $(C:/MSC.SOFTWARE/MSC_NA
+     NASTRAN BUFFSIZE=8193 $(C:/MSC.SOFTWARE/MSC_NASTRAN/20180/CONF/NAST20180.RCF[6])
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     SOL 103                                                                                 
+     CEND                                                                                    
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     3
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      DISPLACEMENT(PLOT)=ALL                                                                  
+                  2      MEFFMASS(ALL)=YES                                                                       
+                  3      SUBCASE       1                                                                         
+                  4        LABEL= LOADSTEP1                                                                      
+                  5        SPC =        1                                                                        
+                  6        METHOD(STRUCTURE) =        2                                                          
+                  7        ANALYSIS = MODES                                                                      
+                  8      BEGIN BULK                                                                              
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                    1-        CQUAD4  1       1       89      92      93      88
+                    2-        CQUAD4  2       1       88      93      84      85
+                    3-        CQUAD4  3       1       92      77      78      93
+                    4-        CQUAD4  4       1       93      78      79      84
+                    5-        CQUAD4  5       1       90      94      92      89
+                    6-        CQUAD4  6       1       94      76      77      92
+                    7-        CQUAD4  7       1       68      69      95      91
+                    8-        CQUAD4  8       1       91      95      94      90
+                    9-        CQUAD4  9       1       69      70      75      95
+                   10-        CQUAD4  10      1       95      75      76      94
+                   11-        CQUAD4  11      1       23      96      98      22
+                   12-        CQUAD4  12      1       22      98      87      21
+                   13-        CQUAD4  13      1       88      99      97      89
+                   14-        CQUAD4  14      1       99      98      96      97
+                   15-        CQUAD4  15      1       85      86      99      88
+                   16-        CQUAD4  16      1       86      87      98      99
+                   17-        CQUAD4  17      1       26      66      100     25
+                   18-        CQUAD4  18      1       25      100     101     24
+                   19-        CQUAD4  19      1       24      101     96      23
+                   20-        CQUAD4  20      1       91      102     67      68
+                   21-        CQUAD4  21      1       102     100     66      67
+                   22-        CQUAD4  22      1       89      97      103     90
+                   23-        CQUAD4  23      1       90      103     102     91
+                   24-        CQUAD4  24      1       97      96      101     103
+                   25-        CQUAD4  25      1       103     101     100     102
+                   26-        CQUAD4  26      1       104     109     12      13
+                   27-        CQUAD4  27      1       109     83      11      12
+                   28-        CQUAD4  28      1       105     108     109     104
+                   29-        CQUAD4  29      1       108     82      83      109
+                   30-        CQUAD4  30      1       106     110     108     105
+                   31-        CQUAD4  31      1       110     81      82      108
+                   32-        CQUAD4  32      1       107     111     110     106
+                   33-        CQUAD4  33      1       111     80      81      110
+                   34-        CQUAD4  34      1       85      84      111     107
+                   35-        CQUAD4  35      1       84      79      80      111
+                   36-        CQUAD4  36      1       18      112     114     17
+                   37-        CQUAD4  37      1       17      114     15      16
+                   38-        CQUAD4  38      1       104     115     113     105
+                   39-        CQUAD4  39      1       115     114     112     113
+                   40-        CQUAD4  40      1       13      14      115     104
+                   41-        CQUAD4  41      1       14      15      114     115
+                   42-        CQUAD4  42      1       21      87      116     20
+                   43-        CQUAD4  43      1       20      116     117     19
+                   44-        CQUAD4  44      1       19      117     112     18
+                   45-        CQUAD4  45      1       107     118     86      85
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     5
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                   46-        CQUAD4  46      1       118     116     87      86
+                   47-        CQUAD4  47      1       106     119     118     107
+                   48-        CQUAD4  48      1       119     117     116     118
+                   49-        CQUAD4  49      1       105     113     119     106
+                   50-        CQUAD4  50      1       113     112     117     119
+                   51-        CQUAD4  51      1       125     128     129     124
+                   52-        CQUAD4  52      1       124     129     120     121
+                   53-        CQUAD4  53      1       128     59      60      129
+                   54-        CQUAD4  54      1       129     60      61      120
+                   55-        CQUAD4  55      1       126     130     128     125
+                   56-        CQUAD4  56      1       130     58      59      128
+                   57-        CQUAD4  57      1       127     131     130     126
+                   58-        CQUAD4  58      1       131     57      58      130
+                   59-        CQUAD4  59      1       73      74      131     127
+                   60-        CQUAD4  60      1       74      56      57      131
+                   61-        CQUAD4  61      1       77      132     134     78
+                   62-        CQUAD4  62      1       78      134     123     79
+                   63-        CQUAD4  63      1       132     133     135     134
+                   64-        CQUAD4  64      1       134     135     122     123
+                   65-        CQUAD4  65      1       133     125     124     135
+                   66-        CQUAD4  66      1       135     124     121     122
+                   67-        CQUAD4  67      1       70      71      136     75
+                   68-        CQUAD4  68      1       75      136     137     76
+                   69-        CQUAD4  69      1       76      137     132     77
+                   70-        CQUAD4  70      1       127     138     72      73
+                   71-        CQUAD4  71      1       138     136     71      72
+                   72-        CQUAD4  72      1       126     139     138     127
+                   73-        CQUAD4  73      1       139     137     136     138
+                   74-        CQUAD4  74      1       125     133     139     126
+                   75-        CQUAD4  75      1       133     132     137     139
+                   76-        CQUAD4  76      1       141     144     145     140
+                   77-        CQUAD4  77      1       140     145     7       8
+                   78-        CQUAD4  78      1       144     64      65      145
+                   79-        CQUAD4  79      1       145     65      6       7
+                   80-        CQUAD4  80      1       142     146     144     141
+                   81-        CQUAD4  81      1       146     63      64      144
+                   82-        CQUAD4  82      1       121     120     147     143
+                   83-        CQUAD4  83      1       143     147     146     142
+                   84-        CQUAD4  84      1       120     61      62      147
+                   85-        CQUAD4  85      1       147     62      63      146
+                   86-        CQUAD4  86      1       82      148     150     83
+                   87-        CQUAD4  87      1       83      150     10      11
+                   88-        CQUAD4  88      1       140     151     149     141
+                   89-        CQUAD4  89      1       151     150     148     149
+                   90-        CQUAD4  90      1       8       9       151     140
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     6
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                   91-        CQUAD4  91      1       9       10      150     151
+                   92-        CQUAD4  92      1       81      152     148     82
+                   93-        CQUAD4  93      1       152     153     149     148
+                   94-        CQUAD4  94      1       153     142     141     149
+                   95-        CQUAD4  95      1       79      123     154     80
+                   96-        CQUAD4  96      1       80      154     152     81
+                   97-        CQUAD4  97      1       123     122     155     154
+                   98-        CQUAD4  98      1       154     155     153     152
+                   99-        CQUAD4  99      1       122     121     143     155
+                  100-        CQUAD4  100     1       155     143     142     153
+                  101-        CQUAD4  101     1       170     173     174     169
+                  102-        CQUAD4  102     1       169     174     165     166
+                  103-        CQUAD4  103     1       173     158     159     174
+                  104-        CQUAD4  104     1       174     159     160     165
+                  105-        CQUAD4  105     1       171     175     173     170
+                  106-        CQUAD4  106     1       175     157     158     173
+                  107-        CQUAD4  107     1       39      40      176     172
+                  108-        CQUAD4  108     1       172     176     175     171
+                  109-        CQUAD4  109     1       40      41      156     176
+                  110-        CQUAD4  110     1       176     156     157     175
+                  111-        CQUAD4  111     1       33      177     179     32
+                  112-        CQUAD4  112     1       32      179     168     31
+                  113-        CQUAD4  113     1       177     178     180     179
+                  114-        CQUAD4  114     1       179     180     167     168
+                  115-        CQUAD4  115     1       178     170     169     180
+                  116-        CQUAD4  116     1       180     169     166     167
+                  117-        CQUAD4  117     1       36      37      181     35
+                  118-        CQUAD4  118     1       35      181     182     34
+                  119-        CQUAD4  119     1       34      182     177     33
+                  120-        CQUAD4  120     1       172     183     38      39
+                  121-        CQUAD4  121     1       183     181     37      38
+                  122-        CQUAD4  122     1       171     184     183     172
+                  123-        CQUAD4  123     1       184     182     181     183
+                  124-        CQUAD4  124     1       170     178     184     171
+                  125-        CQUAD4  125     1       178     177     182     184
+                  126-        CQUAD4  126     1       186     189     190     185
+                  127-        CQUAD4  127     1       185     190     69      68
+                  128-        CQUAD4  128     1       189     163     164     190
+                  129-        CQUAD4  129     1       190     164     70      69
+                  130-        CQUAD4  130     1       187     191     189     186
+                  131-        CQUAD4  131     1       191     162     163     189
+                  132-        CQUAD4  132     1       166     165     192     188
+                  133-        CQUAD4  133     1       188     192     191     187
+                  134-        CQUAD4  134     1       165     160     161     192
+                  135-        CQUAD4  135     1       192     161     162     191
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     7
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  136-        CQUAD4  136     1       28      193     195     27
+                  137-        CQUAD4  137     1       27      195     66      26
+                  138-        CQUAD4  138     1       185     196     194     186
+                  139-        CQUAD4  139     1       196     195     193     194
+                  140-        CQUAD4  140     1       68      67      196     185
+                  141-        CQUAD4  141     1       67      66      195     196
+                  142-        CQUAD4  142     1       31      168     197     30
+                  143-        CQUAD4  143     1       30      197     198     29
+                  144-        CQUAD4  144     1       29      198     193     28
+                  145-        CQUAD4  145     1       188     199     167     166
+                  146-        CQUAD4  146     1       199     197     168     167
+                  147-        CQUAD4  147     1       187     200     199     188
+                  148-        CQUAD4  148     1       200     198     197     199
+                  149-        CQUAD4  149     1       186     194     200     187
+                  150-        CQUAD4  150     1       194     193     198     200
+                  151-        CQUAD4  151     1       205     210     201     202
+                  152-        CQUAD4  152     1       210     50      51      201
+                  153-        CQUAD4  153     1       206     209     210     205
+                  154-        CQUAD4  154     1       209     49      50      210
+                  155-        CQUAD4  155     1       207     211     209     206
+                  156-        CQUAD4  156     1       211     48      49      209
+                  157-        CQUAD4  157     1       208     212     211     207
+                  158-        CQUAD4  158     1       212     47      48      211
+                  159-        CQUAD4  159     1       44      45      212     208
+                  160-        CQUAD4  160     1       45      46      47      212
+                  161-        CQUAD4  161     1       158     213     215     159
+                  162-        CQUAD4  162     1       159     215     204     160
+                  163-        CQUAD4  163     1       213     214     216     215
+                  164-        CQUAD4  164     1       215     216     203     204
+                  165-        CQUAD4  165     1       214     206     205     216
+                  166-        CQUAD4  166     1       216     205     202     203
+                  167-        CQUAD4  167     1       41      42      217     156
+                  168-        CQUAD4  168     1       156     217     218     157
+                  169-        CQUAD4  169     1       157     218     213     158
+                  170-        CQUAD4  170     1       208     219     43      44
+                  171-        CQUAD4  171     1       219     217     42      43
+                  172-        CQUAD4  172     1       206     214     220     207
+                  173-        CQUAD4  173     1       207     220     219     208
+                  174-        CQUAD4  174     1       214     213     218     220
+                  175-        CQUAD4  175     1       220     218     217     219
+                  176-        CQUAD4  176     1       222     225     226     221
+                  177-        CQUAD4  177     1       221     226     74      73
+                  178-        CQUAD4  178     1       225     54      55      226
+                  179-        CQUAD4  179     1       226     55      56      74
+                  180-        CQUAD4  180     1       223     227     225     222
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     8
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  181-        CQUAD4  181     1       227     53      54      225
+                  182-        CQUAD4  182     1       202     201     228     224
+                  183-        CQUAD4  183     1       224     228     227     223
+                  184-        CQUAD4  184     1       201     51      52      228
+                  185-        CQUAD4  185     1       228     52      53      227
+                  186-        CQUAD4  186     1       163     229     231     164
+                  187-        CQUAD4  187     1       164     231     71      70
+                  188-        CQUAD4  188     1       221     232     230     222
+                  189-        CQUAD4  189     1       232     231     229     230
+                  190-        CQUAD4  190     1       73      72      232     221
+                  191-        CQUAD4  191     1       72      71      231     232
+                  192-        CQUAD4  192     1       160     204     233     161
+                  193-        CQUAD4  193     1       161     233     234     162
+                  194-        CQUAD4  194     1       162     234     229     163
+                  195-        CQUAD4  195     1       224     235     203     202
+                  196-        CQUAD4  196     1       235     233     204     203
+                  197-        CQUAD4  197     1       223     236     235     224
+                  198-        CQUAD4  198     1       236     234     233     235
+                  199-        CQUAD4  199     1       222     230     236     223
+                  200-        CQUAD4  200     1       230     229     234     236
+                  201-        EIGRL   2                       21                              MASS
+                  202-        GRID    6               0.      0.      0.
+                  203-        GRID    7               0.      10.     0.
+                  204-        GRID    8               0.      20.     0.
+                  205-        GRID    9               0.      30.     0.
+                  206-        GRID    10              0.      40.     0.
+                  207-        GRID    11              0.      50.     0.
+                  208-        GRID    12              0.      60.     0.
+                  209-        GRID    13              0.      70.     0.
+                  210-        GRID    14              0.      80.     0.
+                  211-        GRID    15              0.      90.     0.
+                  212-        GRID    16              0.      100.    0.
+                  213-        GRID    17              10.     100.    0.
+                  214-        GRID    18              20.     100.    0.
+                  215-        GRID    19              30.     100.    0.
+                  216-        GRID    20              40.     100.    0.
+                  217-        GRID    21              50.     100.    0.
+                  218-        GRID    22              60.     100.    0.
+                  219-        GRID    23              70.     100.    0.
+                  220-        GRID    24              80.     100.    0.
+                  221-        GRID    25              90.     100.    0.
+                  222-        GRID    26              100.    100.    0.
+                  223-        GRID    27              110.    100.    0.
+                  224-        GRID    28              120.    100.    0.
+                  225-        GRID    29              130.    100.    0.
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE     9
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  226-        GRID    30              140.    100.    0.
+                  227-        GRID    31              150.    100.    0.
+                  228-        GRID    32              160.    100.    0.
+                  229-        GRID    33              170.    100.    0.
+                  230-        GRID    34              180.    100.    0.
+                  231-        GRID    35              190.    100.    0.
+                  232-        GRID    36              200.    100.    0.
+                  233-        GRID    37              200.    90.     0.
+                  234-        GRID    38              200.    80.     0.
+                  235-        GRID    39              200.    70.     0.
+                  236-        GRID    40              200.    60.     0.
+                  237-        GRID    41              200.    50.     0.
+                  238-        GRID    42              200.    40.     0.
+                  239-        GRID    43              200.    30.     0.
+                  240-        GRID    44              200.    20.     0.
+                  241-        GRID    45              200.    10.     0.
+                  242-        GRID    46              200.    0.      0.
+                  243-        GRID    47              190.    0.      0.
+                  244-        GRID    48              180.    0.      0.
+                  245-        GRID    49              170.    0.      0.
+                  246-        GRID    50              160.    0.      0.
+                  247-        GRID    51              150.    0.      0.
+                  248-        GRID    52              140.    0.      0.
+                  249-        GRID    53              130.    0.      0.
+                  250-        GRID    54              120.    0.      0.
+                  251-        GRID    55              110.    0.      0.
+                  252-        GRID    56              100.    0.      0.
+                  253-        GRID    57              90.     0.      0.
+                  254-        GRID    58              80.     0.      0.
+                  255-        GRID    59              70.     0.      0.
+                  256-        GRID    60              60.     0.      0.
+                  257-        GRID    61              50.     0.      0.
+                  258-        GRID    62              40.     0.      0.
+                  259-        GRID    63              30.     0.      0.
+                  260-        GRID    64              20.     0.      0.
+                  261-        GRID    65              10.     0.      0.
+                  262-        GRID    66              100.    90.     0.
+                  263-        GRID    67              100.    80.     0.
+                  264-        GRID    68              100.    70.     0.
+                  265-        GRID    69              100.    60.     0.
+                  266-        GRID    70              100.    50.     0.
+                  267-        GRID    71              100.    40.     0.
+                  268-        GRID    72              100.    30.     0.
+                  269-        GRID    73              100.    20.     0.
+                  270-        GRID    74              100.    10.     0.
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    10
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  271-        GRID    75              90.     50.     0.
+                  272-        GRID    76              80.     50.     0.
+                  273-        GRID    77              70.     50.     0.
+                  274-        GRID    78              60.     50.     0.
+                  275-        GRID    79              50.     50.     0.
+                  276-        GRID    80              40.     50.     0.
+                  277-        GRID    81              30.     50.     0.
+                  278-        GRID    82              20.     50.     0.
+                  279-        GRID    83              10.     50.     0.
+                  280-        GRID    84              50.     60.     0.
+                  281-        GRID    85              50.     70.     0.
+                  282-        GRID    86              50.     80.     0.
+                  283-        GRID    87              50.     90.     0.
+                  284-        GRID    88              60.     70.     0.
+                  285-        GRID    89              70.     70.     0.
+                  286-        GRID    90              80.     70.     0.
+                  287-        GRID    91              90.     70.     0.
+                  288-        GRID    92              70.     60.     0.
+                  289-        GRID    93              60.     60.     0.
+                  290-        GRID    94              80.     60.     0.
+                  291-        GRID    95              90.     60.     0.
+                  292-        GRID    96              70.     90.     0.
+                  293-        GRID    97              70.     80.     0.
+                  294-        GRID    98              60.     90.     0.
+                  295-        GRID    99              60.     80.     0.
+                  296-        GRID    100             90.     90.     0.
+                  297-        GRID    101             80.     90.     0.
+                  298-        GRID    102             90.     80.     0.
+                  299-        GRID    103             80.     80.     0.
+                  300-        GRID    104             10.     70.     0.
+                  301-        GRID    105             20.     70.     0.
+                  302-        GRID    106             30.     70.     0.
+                  303-        GRID    107             40.     70.     0.
+                  304-        GRID    108             20.     60.     0.
+                  305-        GRID    109             10.     60.     0.
+                  306-        GRID    110             30.     60.     0.
+                  307-        GRID    111             40.     60.     0.
+                  308-        GRID    112             20.     90.     0.
+                  309-        GRID    113             20.     80.     0.
+                  310-        GRID    114             10.     90.     0.
+                  311-        GRID    115             10.     80.     0.
+                  312-        GRID    116             40.     90.     0.
+                  313-        GRID    117             30.     90.     0.
+                  314-        GRID    118             40.     80.     0.
+                  315-        GRID    119             30.     80.     0.
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    11
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  316-        GRID    120             50.     10.     0.
+                  317-        GRID    121             50.     20.     0.
+                  318-        GRID    122             50.     30.     0.
+                  319-        GRID    123             50.     40.     0.
+                  320-        GRID    124             60.     20.     0.
+                  321-        GRID    125             70.     20.     0.
+                  322-        GRID    126             80.     20.     0.
+                  323-        GRID    127             90.     20.     0.
+                  324-        GRID    128             70.     10.     0.
+                  325-        GRID    129             60.     10.     0.
+                  326-        GRID    130             80.     10.     0.
+                  327-        GRID    131             90.     10.     0.
+                  328-        GRID    132             70.     40.     0.
+                  329-        GRID    133             70.     30.     0.
+                  330-        GRID    134             60.     40.     0.
+                  331-        GRID    135             60.     30.     0.
+                  332-        GRID    136             90.     40.     0.
+                  333-        GRID    137             80.     40.     0.
+                  334-        GRID    138             90.     30.     0.
+                  335-        GRID    139             80.     30.     0.
+                  336-        GRID    140             10.     20.     0.
+                  337-        GRID    141             20.     20.     0.
+                  338-        GRID    142             30.     20.     0.
+                  339-        GRID    143             40.     20.     0.
+                  340-        GRID    144             20.     10.     0.
+                  341-        GRID    145             10.     10.     0.
+                  342-        GRID    146             30.     10.     0.
+                  343-        GRID    147             40.     10.     0.
+                  344-        GRID    148             20.     40.     0.
+                  345-        GRID    149             20.     30.     0.
+                  346-        GRID    150             10.     40.     0.
+                  347-        GRID    151             10.     30.     0.
+                  348-        GRID    152             30.     40.     0.
+                  349-        GRID    153             30.     30.     0.
+                  350-        GRID    154             40.     40.     0.
+                  351-        GRID    155             40.     30.     0.
+                  352-        GRID    156             190.    50.     0.
+                  353-        GRID    157             180.    50.     0.
+                  354-        GRID    158             170.    50.     0.
+                  355-        GRID    159             160.    50.     0.
+                  356-        GRID    160             150.    50.     0.
+                  357-        GRID    161             140.    50.     0.
+                  358-        GRID    162             130.    50.     0.
+                  359-        GRID    163             120.    50.     0.
+                  360-        GRID    164             110.    50.     0.
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    12
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  361-        GRID    165             150.    60.     0.
+                  362-        GRID    166             150.    70.     0.
+                  363-        GRID    167             150.    80.     0.
+                  364-        GRID    168             150.    90.     0.
+                  365-        GRID    169             160.    70.     0.
+                  366-        GRID    170             170.    70.     0.
+                  367-        GRID    171             180.    70.     0.
+                  368-        GRID    172             190.    70.     0.
+                  369-        GRID    173             170.    60.     0.
+                  370-        GRID    174             160.    60.     0.
+                  371-        GRID    175             180.    60.     0.
+                  372-        GRID    176             190.    60.     0.
+                  373-        GRID    177             170.    90.     0.
+                  374-        GRID    178             170.    80.     0.
+                  375-        GRID    179             160.    90.     0.
+                  376-        GRID    180             160.    80.     0.
+                  377-        GRID    181             190.    90.     0.
+                  378-        GRID    182             180.    90.     0.
+                  379-        GRID    183             190.    80.     0.
+                  380-        GRID    184             180.    80.     0.
+                  381-        GRID    185             110.    70.     0.
+                  382-        GRID    186             120.    70.     0.
+                  383-        GRID    187             130.    70.     0.
+                  384-        GRID    188             140.    70.     0.
+                  385-        GRID    189             120.    60.     0.
+                  386-        GRID    190             110.    60.     0.
+                  387-        GRID    191             130.    60.     0.
+                  388-        GRID    192             140.    60.     0.
+                  389-        GRID    193             120.    90.     0.
+                  390-        GRID    194             120.    80.     0.
+                  391-        GRID    195             110.    90.     0.
+                  392-        GRID    196             110.    80.     0.
+                  393-        GRID    197             140.    90.     0.
+                  394-        GRID    198             130.    90.     0.
+                  395-        GRID    199             140.    80.     0.
+                  396-        GRID    200             130.    80.     0.
+                  397-        GRID    201             150.    10.     0.
+                  398-        GRID    202             150.    20.     0.
+                  399-        GRID    203             150.    30.     0.
+                  400-        GRID    204             150.    40.     0.
+                  401-        GRID    205             160.    20.     0.
+                  402-        GRID    206             170.    20.     0.
+                  403-        GRID    207             180.    20.     0.
+                  404-        GRID    208             190.    20.     0.
+                  405-        GRID    209             170.    10.     0.
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    13
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  406-        GRID    210             160.    10.     0.
+                  407-        GRID    211             180.    10.     0.
+                  408-        GRID    212             190.    10.     0.
+                  409-        GRID    213             170.    40.     0.
+                  410-        GRID    214             170.    30.     0.
+                  411-        GRID    215             160.    40.     0.
+                  412-        GRID    216             160.    30.     0.
+                  413-        GRID    217             190.    40.     0.
+                  414-        GRID    218             180.    40.     0.
+                  415-        GRID    219             190.    30.     0.
+                  416-        GRID    220             180.    30.     0.
+                  417-        GRID    221             110.    20.     0.
+                  418-        GRID    222             120.    20.     0.
+                  419-        GRID    223             130.    20.     0.
+                  420-        GRID    224             140.    20.     0.
+                  421-        GRID    225             120.    10.     0.
+                  422-        GRID    226             110.    10.     0.
+                  423-        GRID    227             130.    10.     0.
+                  424-        GRID    228             140.    10.     0.
+                  425-        GRID    229             120.    40.     0.
+                  426-        GRID    230             120.    30.     0.
+                  427-        GRID    231             110.    40.     0.
+                  428-        GRID    232             110.    30.     0.
+                  429-        GRID    233             140.    40.     0.
+                  430-        GRID    234             130.    40.     0.
+                  431-        GRID    235             140.    30.     0.
+                  432-        GRID    236             130.    30.     0.
+                  433-        MAT1    1       70000.          .32     2.7E-09
+                  434-        PARAM   POST    -1
+                  435-        PSHELL  1       1       1.      1               1
+                  436-        SPC     1       6       123     0.
+                  437-        SPC     1       7       123     0.
+                  438-        SPC     1       8       123     0.
+                  439-        SPC     1       9       123     0.
+                  440-        SPC     1       10      123     0.
+                  441-        SPC     1       11      123     0.
+                  442-        SPC     1       12      123     0.
+                  443-        SPC     1       13      123     0.
+                  444-        SPC     1       14      123     0.
+                  445-        SPC     1       15      123     0.
+                  446-        SPC     1       16      123     0.
+                  447-        SPC     1       17      123     0.
+                  448-        SPC     1       18      123     0.
+                  449-        SPC     1       19      123     0.
+                  450-        SPC     1       20      123     0.
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    14
+                                                                                                                                    
+0                                                                                                                                   
+                                                  S O R T E D   B U L K   D A T A   E C H O                                         
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                  451-        SPC     1       21      123     0.
+                  452-        SPC     1       22      123     0.
+                  453-        SPC     1       23      123     0.
+                  454-        SPC     1       24      123     0.
+                  455-        SPC     1       25      123     0.
+                  456-        SPC     1       26      123     0.
+                  457-        SPC     1       27      123     0.
+                  458-        SPC     1       28      123     0.
+                  459-        SPC     1       29      123     0.
+                  460-        SPC     1       30      123     0.
+                  461-        SPC     1       31      123     0.
+                  462-        SPC     1       32      123     0.
+                  463-        SPC     1       33      123     0.
+                  464-        SPC     1       34      123     0.
+                  465-        SPC     1       35      123     0.
+                  466-        SPC     1       36      123     0.
+                              ENDDATA
+                        TOTAL COUNT= 467
+                              INPUT BULK DATA ENTRY COUNT = 472
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    15
+                                                                                                                                    
+0                                                                                                                                   
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                       CQUAD4                      200
+                                        EIGRL                        1
+                                         GRID                      231
+                                         MAT1                        1
+                                        PARAM                        1
+                                       PSHELL                        1
+                                          SPC                       31
+
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+ *** USER INFORMATION MESSAGE 4109 (OUTPX2)
+     THE LABEL IS XXXXXXXX FOR FORTRAN UNIT 12
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          7 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          8 RECORDS.)
+                (TOTAL DATA WRITTEN FOR LABEL =         17 WORDS.)
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK GEOM1X   WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM168, TRL =
+                    101                 0                 0                 8                 0                 0                 0
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM1   
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =        1851 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =        1882 WORDS.)
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK GEOM2X   WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM201, TRL =
+                    102                 0                 0                 0              8192                 0                 0
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM2   
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =        2803 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =        2834 WORDS.)
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK GEOM4X   WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM4705, TRL =
+                    104                 0                 0                 0               512                 0                 0
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM4   
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         127 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =         158 WORDS.)
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    16
+                                                                                                                                    
+0                                                                                                                                   
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK EPTX     WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR EPT01, TRL =
+                    105                 0               512                 0                 0                 0                 0
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS EPT     
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          14 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =          45 WORDS.)
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK MPTS     WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR MPT, TRL =
+                    101             32768                 0                 0                 0                 0                 0
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS MPT     
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          15 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =          46 WORDS.)
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK DYNAMICS WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR DYNAMICS, TRL =
+                    103               256                 0                 0                 0                 0                 0
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS DYNAMICS
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          30 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =          61 WORDS.)
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    17
+                                                                                                                                    
+0                                                                                                                                   
+ *** USER INFORMATION MESSAGE 7310 (VECPRN)
+     ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM WILL BE USED AS REFERENCE LOCATION.
+     RESULTANTS ABOUT ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM IN SUPERELEMENT OR MODULE
+     BASIC SYSTEM COORDINATES.
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX    0.000000E+00     ----          ----          ----       0.000000E+00  0.000000E+00                             
+               FY       ----       0.000000E+00     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
+ *** USER INFORMATION MESSAGE 5010 (LNCILS)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = 4.503022D+06, CYCLES = 3.377320D+02 THE STURM COUNT = 2
+ *** USER INFORMATION MESSAGE 5010 (LNCILS)
+     STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
+     TRIAL EIGENVALUE = 3.054668D+08, CYCLES = 2.781648D+03 THE STURM COUNT = 21
+
+ TABLE OF SHIFTS:  (LNNRIGL)
+ SHIFT #        SHIFT VALUE         FREQUENCY, CYCLES     # EIGENVALUES BELOW    # NEW EIGENVALUES FOUND
+     1.        4.5030221E+06          3.3773197E+02                 2                       22
+     2.        3.0546678E+08          2.7816477E+03                21                        0
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    18
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+0
+
+
+                          E I G E N V A L U E  A N A L Y S I S   S U M M A R Y   (READ MODULE) 
+
+
+
+                                     BLOCK SIZE USED ......................     7
+
+                                     NUMBER OF DECOMPOSITIONS .............     2
+
+                                     NUMBER OF ROOTS FOUND ................    21
+
+                                     NUMBER OF SOLVES REQUIRED ............    12
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    19
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+ 
+                                              R E A L   E I G E N V A L U E S
+   MODE    EXTRACTION      EIGENVALUE            RADIANS             CYCLES            GENERALIZED         GENERALIZED
+    NO.       ORDER                                                                       MASS              STIFFNESS
+        1         1        6.379803E+04        2.525827E+02        4.019979E+01        1.000000E+00        6.379803E+04
+        2         2        9.338276E+05        9.663475E+02        1.537990E+02        1.000000E+00        9.338276E+05
+        3         3        4.979511E+06        2.231482E+03        3.551514E+02        1.000000E+00        4.979511E+06
+        4         4        6.202936E+06        2.490569E+03        3.963864E+02        1.000000E+00        6.202936E+06
+        5         5        1.128242E+07        3.358931E+03        5.345905E+02        1.000000E+00        1.128242E+07
+        6         6        1.857027E+07        4.309324E+03        6.858502E+02        1.000000E+00        1.857027E+07
+        7         7        2.415944E+07        4.915225E+03        7.822823E+02        1.000000E+00        2.415944E+07
+        8         8        4.902359E+07        7.001685E+03        1.114353E+03        1.000000E+00        4.902359E+07
+        9         9        5.007466E+07        7.076345E+03        1.126235E+03        1.000000E+00        5.007466E+07
+       10        10        5.843053E+07        7.643987E+03        1.216578E+03        1.000000E+00        5.843053E+07
+       11        11        7.081354E+07        8.415078E+03        1.339301E+03        1.000000E+00        7.081354E+07
+       12        12        9.508378E+07        9.751091E+03        1.551934E+03        1.000000E+00        9.508378E+07
+       13        13        9.891293E+07        9.945498E+03        1.582875E+03        1.000000E+00        9.891293E+07
+       14        14        1.128402E+08        1.062263E+04        1.690643E+03        1.000000E+00        1.128402E+08
+       15        15        1.453435E+08        1.205585E+04        1.918748E+03        1.000000E+00        1.453435E+08
+       16        16        1.742771E+08        1.320141E+04        2.101069E+03        1.000000E+00        1.742771E+08
+       17        17        2.170261E+08        1.473181E+04        2.344640E+03        1.000000E+00        2.170261E+08
+       18        18        2.205831E+08        1.485204E+04        2.363776E+03        1.000000E+00        2.205831E+08
+       19        19        2.447684E+08        1.564508E+04        2.489991E+03        1.000000E+00        2.447684E+08
+       20        20        2.660921E+08        1.631233E+04        2.596188E+03        1.000000E+00        2.660921E+08
+       21        21        2.993614E+08        1.730206E+04        2.753709E+03        1.000000E+00        2.993614E+08
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    20
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+
+                                       M O D A L   E F F E C T I V E   M A S S   S U M M A R Y
+
+
+
+                                                    TOTAL EFFECTIVE MASS FRACTION
+                                         REFERENCE POINT AT ORIGIN OF BASIC COORDINATE SYSTEM
+
+
+                        T1                T2                T3                R1                R2                R3
+                   9.798672E-19      3.561034E-20      9.697029E-01      9.249190E-01      9.821277E-01      1.540662E-19
+
+
+
+
+                                                        EFFECTIVE MASS MATRIX   
+                       ***                                                                                  ***
+                       *   4.901051E-23 -9.024952E-24 -3.428613E-16 -3.632898E-15 -2.193019E-13 -2.392689E-21 *
+                       *  -9.024952E-24  1.781140E-24 -8.015474E-17 -1.301638E-14  4.296081E-14  4.778565E-22 *
+                       *  -3.428613E-16 -8.015474E-17  4.850211E-05  2.246874E-03 -5.037179E-03 -1.834261E-14 *
+                       *  -3.632898E-15 -1.301638E-14  2.246874E-03  1.387864E-01 -2.337805E-01 -3.092787E-12 *
+                       *  -2.193019E-13  4.296081E-14 -5.037179E-03 -2.337805E-01  6.726151E-01  1.018549E-11 *
+                       *  -2.392689E-21  4.778565E-22 -1.834261E-14 -3.092787E-12  1.018549E-11  1.286311E-19 *
+                       ***                                                                                  ***
+
+                                                     A-SET RIGID BODY MASS MATRIX
+                       ***                                                                                  ***
+                       *   5.001750E-05  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00 -2.369250E-03 *
+                       *   0.000000E+00  5.001750E-05  0.000000E+00  0.000000E+00  0.000000E+00  5.130000E-03 *
+                       *   0.000000E+00  0.000000E+00  5.001750E-05  2.369250E-03 -5.130000E-03  0.000000E+00 *
+                       *   0.000000E+00  0.000000E+00  2.369250E-03  1.500525E-01 -2.430000E-01  0.000000E+00 *
+                       *   0.000000E+00  0.000000E+00 -5.130000E-03 -2.430000E-01  6.848550E-01  0.000000E+00 *
+                       *  -2.369250E-03  5.130000E-03  0.000000E+00  0.000000E+00  0.000000E+00  8.349075E-01 *
+                       ***                                                                                  ***
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    21
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+
+                                                    MODAL EFFECTIVE MASS FRACTION
+                                                (FOR TRANSLATIONAL DEGREES OF FREEDOM)
+
+    MODE    FREQUENCY                      T1                                  T2                                  T3
+     NO.                        FRACTION            SUM             FRACTION            SUM             FRACTION            SUM
+
+       1    4.019979E+01      1.819123E-34      1.819123E-34      9.477784E-35      9.477784E-35      6.427669E-01      6.427669E-01
+       2    1.537990E+02      1.662921E-34      3.482044E-34      3.295403E-37      9.510738E-35      7.250911E-02      7.152760E-01
+       3    3.551514E+02      1.409750E-41      3.482044E-34      1.285751E-39      9.510866E-35      7.762455E-02      7.929005E-01
+       4    3.963864E+02      8.823290E-35      4.364373E-34      4.776743E-39      9.511344E-35      6.328887E-02      8.561894E-01
+       5    5.345905E+02      5.100482E-35      4.874421E-34      5.994040E-38      9.517338E-35      1.969836E-02      8.758878E-01
+       6    6.858502E+02      4.345063E-34      9.219484E-34      5.430960E-35      1.494830E-34      1.535153E-02      8.912393E-01
+       7    7.822823E+02      9.183730E-34      1.840321E-33      6.735356E-35      2.168365E-34      5.909824E-03      8.971491E-01
+       8    1.114353E+03      6.029801E-34      2.443302E-33      5.779225E-34      7.947590E-34      1.004007E-05      8.971592E-01
+       9    1.126235E+03      3.151763E-32      3.396093E-32      7.793747E-34      1.574134E-33      3.463591E-03      9.006227E-01
+      10    1.216578E+03      1.199517E-31      1.539126E-31      1.207838E-33      2.781972E-33      3.788843E-02      9.385112E-01
+      11    1.339301E+03      7.477507E-33      1.613901E-31      7.117157E-35      2.853143E-33      3.120406E-03      9.416316E-01
+      12    1.551934E+03      7.298894E-30      7.460284E-30      1.068021E-31      1.096553E-31      1.422225E-03      9.430538E-01
+      13    1.582875E+03      2.824751E-31      7.742759E-30      2.214088E-34      1.098767E-31      5.823099E-04      9.436361E-01
+      14    1.690643E+03      4.676514E-28      4.753942E-28      1.530631E-29      1.541619E-29      4.263597E-03      9.478997E-01
+      15    1.918748E+03      1.505581E-25      1.510335E-25      2.343670E-27      2.359086E-27      9.112923E-04      9.488110E-01
+      16    2.101069E+03      6.000924E-24      6.151957E-24      1.026872E-25      1.050463E-25      1.110424E-03      9.499214E-01
+      17    2.344640E+03      7.003877E-23      7.619073E-23      2.128734E-24      2.233780E-24      5.451040E-04      9.504665E-01
+      18    2.363776E+03      4.234744E-22      4.996651E-22      5.624524E-24      7.858304E-24      5.648921E-03      9.561155E-01
+      19    2.489991E+03      7.738114E-20      7.788080E-20      2.727334E-21      2.735193E-21      9.471619E-03      9.655871E-01
+      20    2.596188E+03      5.089482E-19      5.868290E-19      9.793263E-21      1.252846E-20      3.775796E-03      9.693629E-01
+      21    2.753709E+03      3.930383E-19      9.798672E-19      2.308189E-20      3.561034E-20      3.399869E-04      9.697029E-01
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    22
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+
+                                                    MODAL EFFECTIVE MASS FRACTION
+                                                 (FOR ROTATIONAL DEGREES OF FREEDOM)
+
+    MODE    FREQUENCY                      R1                                  R2                                  R3
+     NO.                        FRACTION            SUM             FRACTION            SUM             FRACTION            SUM
+
+       1    4.019979E+01      2.361490E-01      2.361490E-01      7.858993E-01      7.858993E-01      1.345204E-34      1.345204E-34
+       2    1.537990E+02      2.284726E-02      2.589963E-01      7.173667E-03      7.930729E-01      5.744915E-37      1.350949E-34
+       3    3.551514E+02      9.939544E-02      3.583917E-01      2.172424E-02      8.147972E-01      2.259346E-39      1.350971E-34
+       4    3.963864E+02      2.892411E-01      6.476328E-01      1.112739E-01      9.260710E-01      2.574418E-37      1.353546E-34
+       5    5.345905E+02      5.802729E-02      7.056601E-01      3.727549E-04      9.264438E-01      1.411594E-35      1.494705E-34
+       6    6.858502E+02      6.574591E-03      7.122347E-01      5.092924E-04      9.269531E-01      5.600614E-34      7.095319E-34
+       7    7.822823E+02      1.668585E-02      7.289205E-01      5.362597E-05      9.270067E-01      2.177377E-33      2.886909E-33
+       8    1.114353E+03      3.216839E-03      7.321374E-01      1.995588E-05      9.270267E-01      2.391271E-33      5.278179E-33
+       9    1.126235E+03      3.473429E-04      7.324847E-01      2.852212E-03      9.298789E-01      3.496763E-32      4.024581E-32
+      10    1.216578E+03      1.108532E-01      8.433380E-01      3.522925E-02      9.651081E-01      5.186861E-32      9.211442E-32
+      11    1.339301E+03      1.277896E-02      8.561169E-01      3.543419E-05      9.651436E-01      9.903907E-33      1.020183E-31
+      12    1.551934E+03      5.289752E-03      8.614067E-01      1.131719E-04      9.652567E-01      6.413095E-31      7.433278E-31
+      13    1.582875E+03      8.283282E-04      8.622350E-01      1.344711E-05      9.652702E-01      2.180634E-32      7.651341E-31
+      14    1.690643E+03      1.054657E-03      8.632897E-01      6.731177E-05      9.653375E-01      3.696687E-29      3.773201E-29
+      15    1.918748E+03      2.626663E-03      8.659163E-01      2.895477E-08      9.653375E-01      1.092914E-26      1.096687E-26
+      16    2.101069E+03      4.162684E-03      8.700790E-01      1.036894E-04      9.654412E-01      3.307950E-25      3.417619E-25
+      17    2.344640E+03      1.294769E-06      8.700803E-01      2.275916E-05      9.654640E-01      1.999038E-23      2.033214E-23
+      18    2.363776E+03      6.323839E-03      8.764041E-01      6.575523E-04      9.661215E-01      1.658275E-23      3.691489E-23
+      19    2.489991E+03      3.619867E-02      9.126028E-01      1.596425E-02      9.820858E-01      8.750099E-21      8.787014E-21
+      20    2.596188E+03      1.105809E-02      9.236609E-01      2.296093E-06      9.820881E-01      3.766552E-20      4.645253E-20
+      21    2.753709E+03      1.258142E-03      9.249190E-01      3.961485E-05      9.821277E-01      1.076137E-19      1.540662E-19
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    23
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+
+                                                     MODAL PARTICIPATION FACTORS
+
+    MODE     FREQUENCY               T1                T2                T3                R1                R2                R3
+     NO.
+
+       1    4.019979E+01     -9.538763E-20     -6.885166E-20     -5.670061E-03     -1.882412E-01      7.336396E-01     -1.059774E-17
+       2    1.537990E+02     -9.120040E-20      4.059899E-21      1.904396E-03      5.855159E-02      7.009224E-02     -6.925657E-19
+       3    3.551514E+02     -2.655413E-23      2.535943E-22     -1.970428E-03     -1.221251E-01      1.219752E-01      4.343207E-20
+       4    3.963864E+02      6.643184E-20      4.887952E-22      1.779200E-03      2.083299E-01     -2.760552E-01     -4.636163E-19
+       5    5.345905E+02     -5.050875E-20     -1.731493E-21      9.926039E-04      9.331206E-02      1.597758E-02     -3.433003E-18
+       6    6.858502E+02      1.474209E-19     -5.211939E-20      8.762677E-04      3.140913E-02     -1.867596E-02     -2.162405E-17
+       7    7.822823E+02     -2.143239E-19     -5.804185E-20     -5.436861E-04     -5.003752E-02      6.060199E-03      4.263693E-17
+       8    1.114353E+03     -1.736651E-19      1.700183E-19     -2.240935E-05      2.197032E-02     -3.696875E-03      4.468210E-17
+       9    1.126235E+03     -1.255561E-18      1.974395E-19      4.162213E-04      7.219396E-03      4.419674E-02      1.708647E-16
+      10    1.216578E+03     -2.449425E-18     -2.457906E-19     -1.376621E-03     -1.289721E-01      1.553285E-01      2.080997E-16
+      11    1.339301E+03     -6.115605E-19      5.966426E-20     -3.950632E-04     -4.378945E-02     -4.926183E-03      9.093320E-17
+      12    1.551934E+03      1.910687E-17     -2.311271E-18     -2.667136E-04     -2.817340E-02     -8.803770E-03     -7.317336E-16
+      13    1.582875E+03      3.758816E-18      1.052346E-19      1.706625E-04      1.114866E-02     -3.034686E-03     -1.349306E-16
+      14    1.690643E+03     -1.529404E-16      2.766918E-17      4.617948E-04      1.257990E-02      6.789610E-03      5.555530E-15
+      15    1.918748E+03     -2.744183E-15      3.423807E-16     -2.134960E-04     -1.985289E-02      1.408184E-04      9.552391E-14
+      16    2.101069E+03      1.732487E-14     -2.266309E-15      2.356706E-04      2.499242E-02     -8.426875E-03     -5.255314E-13
+      17    2.344640E+03      5.918753E-14     -1.031862E-14     -1.651204E-04     -4.407758E-04      3.948002E-03     -4.085354E-12
+      18    2.363776E+03     -1.455374E-13      1.677274E-14      5.315495E-04      3.080435E-02     -2.122093E-02      3.720895E-12
+      19    2.489991E+03     -1.967336E-12      3.693433E-13     -6.882926E-04     -7.370007E-02      1.045619E-01      8.547235E-11
+      20    2.596188E+03     -5.045425E-12      6.998818E-13      4.345755E-04      4.073443E-02     -1.253990E-03      1.773336E-10
+      21    2.753709E+03      4.433824E-12     -1.074476E-12      1.304043E-04      1.373999E-02     -5.208688E-03     -2.997457E-10
+
+                  TOTAL      -2.650842E-12     -6.951321E-16     -3.378545E-03     -1.005403E-01      9.114072E-01     -3.772897E-11
+
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    24
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+
+                                                         MODAL EFFECTIVE MASS   
+
+    MODE     FREQUENCY               T1                T2                T3                R1                R2                R3
+     NO.
+
+       1    4.019979E+01      9.098800E-39      4.740550E-39      3.214959E-05      3.543475E-02      5.382270E-01      1.123121E-34
+       2    1.537990E+02      8.317513E-39      1.648278E-41      3.626724E-06      3.428289E-03      4.912922E-03      4.796472E-37
+       3    3.551514E+02      7.051217E-46      6.431007E-44      3.882586E-06      1.491453E-02      1.487795E-02      1.886345E-39
+       4    3.963864E+02      4.413189E-39      2.389207E-43      3.165551E-06      4.340135E-02      7.620647E-02      2.149401E-37
+       5    5.345905E+02      2.551134E-39      2.998069E-42      9.852625E-07      8.707140E-03      2.552830E-04      1.178551E-35
+       6    6.858502E+02      2.173292E-38      2.716431E-39      7.678451E-07      9.865338E-04      3.487914E-04      4.675995E-34
+       7    7.822823E+02      4.593472E-38      3.368857E-39      2.955946E-07      2.503753E-03      3.672601E-05      1.817908E-33
+       8    1.114353E+03      3.015956E-38      2.890624E-38      5.021790E-10      4.826947E-04      1.366688E-05      1.996490E-33
+       9    1.126235E+03      1.576433E-36      3.898238E-38      1.732402E-07      5.211967E-05      1.953352E-03      2.919474E-32
+      10    1.216578E+03      5.999682E-36      6.041304E-38      1.895085E-06      1.663381E-02      2.412693E-02      4.330549E-32
+      11    1.339301E+03      3.740062E-37      3.559824E-39      1.560749E-07      1.917516E-03      2.426728E-05      8.268846E-33
+      12    1.551934E+03      3.650724E-34      5.341975E-36      7.113616E-08      7.937405E-04      7.750636E-05      5.354341E-31
+      13    1.582875E+03      1.412870E-35      1.107432E-38      2.912569E-08      1.242927E-04      9.209319E-06      1.820627E-32
+      14    1.690643E+03      2.339075E-32      7.655834E-34      2.132544E-07      1.582539E-04      4.609880E-05      3.086392E-29
+      15    1.918748E+03      7.530541E-30      1.172245E-31      4.558056E-08      3.941373E-04      1.982982E-08      9.124818E-27
+      16    2.101069E+03      3.001512E-28      5.136156E-30      5.554065E-08      6.246212E-04      7.101223E-05      2.761832E-25
+      17    2.344640E+03      3.503164E-27      1.064739E-28      2.726474E-08      1.942833E-07      1.558672E-05      1.669012E-23
+      18    2.363776E+03      2.118113E-26      2.813246E-28      2.825449E-07      9.489079E-04      4.503280E-04      1.384506E-23
+      19    2.489991E+03      3.870411E-24      1.364145E-25      4.737467E-07      5.431700E-03      1.093319E-02      7.305523E-21
+      20    2.596188E+03      2.545632E-23      4.898345E-25      1.888559E-07      1.659294E-03      1.572491E-06      3.144722E-20
+      21    2.753709E+03      1.965879E-23      1.154498E-24      1.700529E-08      1.887873E-04      2.713043E-05      8.984749E-20
+
+                  TOTAL       4.901051E-23      1.781140E-24      4.850211E-05      1.387864E-01      6.726151E-01      1.286311E-19
+
+
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    25
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+
+                                                        MODAL EFFECTIVE WEIGHT  
+
+    MODE     FREQUENCY               T1                T2                T3                R1                R2                R3
+     NO.
+
+       1    4.019979E+01      9.098800E-39      4.740550E-39      3.214959E-05      3.543475E-02      5.382270E-01      1.123121E-34
+       2    1.537990E+02      8.317513E-39      1.648278E-41      3.626724E-06      3.428289E-03      4.912922E-03      4.796472E-37
+       3    3.551514E+02      7.051217E-46      6.431007E-44      3.882586E-06      1.491453E-02      1.487795E-02      1.886345E-39
+       4    3.963864E+02      4.413189E-39      2.389207E-43      3.165551E-06      4.340135E-02      7.620647E-02      2.149401E-37
+       5    5.345905E+02      2.551134E-39      2.998069E-42      9.852625E-07      8.707140E-03      2.552830E-04      1.178551E-35
+       6    6.858502E+02      2.173292E-38      2.716431E-39      7.678451E-07      9.865338E-04      3.487914E-04      4.675995E-34
+       7    7.822823E+02      4.593472E-38      3.368857E-39      2.955946E-07      2.503753E-03      3.672601E-05      1.817908E-33
+       8    1.114353E+03      3.015956E-38      2.890624E-38      5.021790E-10      4.826947E-04      1.366688E-05      1.996490E-33
+       9    1.126235E+03      1.576433E-36      3.898238E-38      1.732402E-07      5.211967E-05      1.953352E-03      2.919474E-32
+      10    1.216578E+03      5.999682E-36      6.041304E-38      1.895085E-06      1.663381E-02      2.412693E-02      4.330549E-32
+      11    1.339301E+03      3.740062E-37      3.559824E-39      1.560749E-07      1.917516E-03      2.426728E-05      8.268846E-33
+      12    1.551934E+03      3.650724E-34      5.341975E-36      7.113616E-08      7.937405E-04      7.750636E-05      5.354341E-31
+      13    1.582875E+03      1.412870E-35      1.107432E-38      2.912569E-08      1.242927E-04      9.209319E-06      1.820627E-32
+      14    1.690643E+03      2.339075E-32      7.655834E-34      2.132544E-07      1.582539E-04      4.609880E-05      3.086392E-29
+      15    1.918748E+03      7.530541E-30      1.172245E-31      4.558056E-08      3.941373E-04      1.982982E-08      9.124818E-27
+      16    2.101069E+03      3.001512E-28      5.136156E-30      5.554065E-08      6.246212E-04      7.101223E-05      2.761832E-25
+      17    2.344640E+03      3.503164E-27      1.064739E-28      2.726474E-08      1.942833E-07      1.558672E-05      1.669012E-23
+      18    2.363776E+03      2.118113E-26      2.813246E-28      2.825449E-07      9.489079E-04      4.503280E-04      1.384506E-23
+      19    2.489991E+03      3.870411E-24      1.364145E-25      4.737467E-07      5.431700E-03      1.093319E-02      7.305523E-21
+      20    2.596188E+03      2.545632E-23      4.898345E-25      1.888559E-07      1.659294E-03      1.572491E-06      3.144722E-20
+      21    2.753709E+03      1.965879E-23      1.154498E-24      1.700529E-08      1.887873E-04      2.713043E-05      8.984749E-20
+
+                  TOTAL       4.901051E-23      1.781140E-24      4.850211E-05      1.387864E-01      6.726151E-01      1.286311E-19
+
+
+ *** USER INFORMATION MESSAGE 4114 (OUTPX2)
+     DATA BLOCK OUG1     WRITTEN ON FORTRAN UNIT  12 IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR OUG1, TRL =
+                    101                 0             38808                 0                 0                 0                 2
+     NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS OUG1    
+        (MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
+     (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =        1848 WORDS.)
+           (NUMBER OF FORTRAN RECORDS WRITTEN =         220 RECORDS.)
+           (TOTAL DATA WRITTEN FOR DATA BLOCK =       42067 WORDS.)
+ *** USER INFORMATION MESSAGE 4110 (OUTPX2)
+                                 END-OF-DATA SIMULATION ON FORTRAN UNIT 12
+                                 (MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =      1 WORDS.)
+                                       (NUMBER OF FORTRAN RECORDS WRITTEN =      1 RECORDS.)
+                                       (TOTAL DATA WRITTEN FOR EOF MARKER =      1 WORDS.)
+1                                                                          FEBRUARY   2, 2025  MSC Nastran 12/ 1/17   PAGE    26
+                                                                                                                                    
+0     LOADSTEP1                                                                                              SUBCASE 1              
+ * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
+
+
+
+0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
+0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
+ --------------------------------------------------------------------------------------------------------------------------
+     0     0    1    1 '        '    T    T    T    T    T     T      F      T      0     F     -1            0           F
+0SEID = SUPERELEMENT ID.
+ PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
+ PROJ = PROJECT ID NUMBER.
+ VERS = VERSION ID.
+ APRCH = BLANK FOR STRUCTURAL ANALYSIS.  HEAT FOR HEAT TRANSFER ANALYSIS.
+ SEMG = STIFFNESS AND MASS MATRIX GENERATION STEP.
+ SEMR = MASS MATRIX REDUCTION STEP (INCLUDES EIGENVALUE SOLUTION FOR MODES).
+ SEKR = STIFFNESS MATRIX REDUCTION STEP.
+ SELG = LOAD MATRIX GENERATION STEP.
+ SELR = LOAD MATRIX REDUCTION STEP. 
+ MODES = T (TRUE) IF NORMAL MODES OR BUCKLING MODES CALCULATED.
+ DYNRED = T (TRUE) MEANS GENERALIZED DYNAMIC AND/OR COMPONENT MODE REDUCTION PERFORMED.
+ SOLLIN = T (TRUE) IF LINEAR SOLUTION EXISTS IN DATABASE.
+ PVALID = P-DISTRIBUTION ID OF P-VALUE FOR P-ELEMENTS
+ LOOPID = THE LAST LOOPID VALUE USED IN THE NONLINEAR ANALYSIS.  USEFUL FOR RESTARTS.
+ SOLNL = T (TRUE) IF NONLINEAR SOLUTION EXISTS IN DATABASE.
+ DESIGN CYCLE = THE LAST DESIGN CYCLE (ONLY VALID IN OPTIMIZATION).
+ SENSITIVITY = SENSITIVITY MATRIX GENERATION FLAG.
+ 
+ No PARAM values were set in the Control File.
+ 
+1                                        * * * END OF JOB * * *
+ 
+ 
+ No Symbolic Replacement variables or values were specified.
+
